@@ -19,7 +19,7 @@ function App() {
         <Route path="/sobre">
           <Sobre/>
         </Route>
-        <Route path="/carrinho">
+        <Route path="/carrinho/:id">
           <Carrinho/>
         </Route>
       </Switch>

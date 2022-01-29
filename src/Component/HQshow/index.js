@@ -1,21 +1,22 @@
 import React from 'react';
 
-import { HQcontainer, HQlist } from './styles';
+import { HQcontainer, HQlist, ComicLable, LinkComic } from './styles';
 
-const ListComponent = (props) => (
-    <li key={props.index}>
-        <a href={`/compra?id=${props.comic.id}`}>
-            <img src={`${props.comic.thumbnail.path}/portrait_incredible.${props.comic.thumbnail.extension}`}></img>
-            <span>{props.comic.title}</span>
-        </a>
-    </li>
-)
+
 
 function HQshow(props) {
     return (
         <HQcontainer>
-            <HQlist id='grid'>
-                {props.list.map((comic, index) => <ListComponent comic={comic} index={index}/>)}
+            <HQlist>
+                {props.list.map((comic, index) =>
+                    <li key={index}>
+                        {comic.raro ? <ComicLable raro={comic.raro}>Raro</ComicLable> : <ComicLable raro={comic.raro}>Comum</ComicLable>}
+                        <LinkComic href={`/compra/${comic.id}`} raro={comic.raro} alt='a'>
+                            <img src={`${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`} alt=''></img>
+                            <span>{comic.title}</span>
+                        </LinkComic>
+                    </li>
+                )}
             </HQlist>
         </HQcontainer>
     );

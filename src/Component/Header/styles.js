@@ -5,15 +5,13 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #b11100;
-    -webkit-box-shadow: 1px 11px 17px 3px rgba(0,0,0,0.62); 
-    box-shadow: 1px 11px 17px 3px rgba(0,0,0,0.62);
+    background-color: black;
     padding: 0 5vw;
-    
+    z-index: 3;
+    border-bottom: 2px solid #e50b14;
     a img{
         object-fit: contain;
-        min-width: 150px;
-        max-width: 8vw;
+        width: 150px;
         cursor: pointer;
     }
 `;
@@ -33,7 +31,7 @@ export const PageLink = styled.ul`
     li a{
         color: white;
         padding-left: 20px;
-        width: 80px;
+        width: 100px;
         cursor: pointer;
         text-decoration: none;
         display: flex;

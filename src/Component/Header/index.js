@@ -11,7 +11,7 @@ function Header() {
   }
   return (
       <HeaderContainer>
-          <a href='/'><img src={Logo}/></a>
+          <a href='/'><img src={Logo} alt='a'/></a>
           <MobileMenuButton show={showMobile}>
                 {showMobile ? <CloseIcon color='#b11100' size="35" onClick={HandleMobileMenu}/> : <Menuicon color='white' size="35" onClick={HandleMobileMenu}/>}
           </MobileMenuButton>

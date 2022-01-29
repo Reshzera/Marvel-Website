@@ -4,9 +4,11 @@ export const GlobalStyle = createGlobalStyle`
   *{
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
   }
   body{
-      background-color: #dddddd;
-      width: 100%;
+      background-color: black;
+      width: 100vw;
+      overflow-x: hidden;
   }
 `
