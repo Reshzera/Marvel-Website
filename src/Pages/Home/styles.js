@@ -12,21 +12,30 @@ export const HomeContainer = styled.div`
         padding: 20px 10px;
     }
 `;
-export const SectionTitle = styled.h1`
+export const SectionTitle = styled.span`
     color: whitesmoke;
-    font-weight: bolder;
-    font-size: 2rem;
-    padding-bottom: 40px;
+    display: flex;
+    max-width: 350px;
+    height: 70px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: darkred;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+    border-radius: 10px;
 `;
 export const CuponsAd = styled.div`
     display: flex;
+    padding-top: 70px;
     background-color: #000000;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 1000px;
     z-index:-1;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
     img{
         object-fit: cover;
         height:100%;

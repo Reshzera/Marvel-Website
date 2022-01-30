@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HQcontainer = styled.div`
     width: 100%;
@@ -18,18 +19,19 @@ export const HQlist =  styled.ul`
 export const ComicLable = styled.div`
     display: flex;
     width: 80px;
+    position: absolute;
+    margin: 10px;
     height: 40px;
     border-radius: 10px;
     background-color: ${props => props.raro ? "#0086c6" : "darkred"};
-    position: absolute;
-    margin: 10px;
     align-items: center;
-    font-weight: bolder;
     justify-content: center;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
     box-shadow: 5px 5px 15px 5px #000000;
     color: white;
 `;
-export const LinkComic = styled.a`
+export const LinkComic = styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,13 +39,13 @@ export const LinkComic = styled.a`
     color: whitesmoke;
     background-color: ${props => props.raro ? "#0086c6" : "darkred"};
     border-radius: 10px;
-    font-weight: bolder;
     span{
         display: flex;
         height: 60px;
         align-items: center;
         text-align: center;
         padding: 10px;
+        font-size: 20px
     }
     img{
         object-fit: contain;

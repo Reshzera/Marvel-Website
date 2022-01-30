@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
+    position: fixed;
+    width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
@@ -17,7 +19,7 @@ export const HeaderContainer = styled.header`
 `;
 export const MobileMenuButton = styled.div`
     display: none;
-    @media(max-width: 600px){
+    @media(max-width: 670px){
         display: block;
         z-index: 3;
         transform: ${props => props.show ? "rotate(180deg)" : "rotate(0deg)"};
@@ -30,15 +32,21 @@ export const PageLink = styled.ul`
     list-style: none;
     li a{
         color: white;
-        padding-left: 20px;
+        margin-left: 20px;
         width: 100px;
         cursor: pointer;
         text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        font-size: 25px;
+        transition: all .2s ease-in-out;
+        letter-spacing: 1px;
+        :hover{
+            color: darkred;
+        }
     }
-    @media(max-width: 600px){
+    @media(max-width: 670px){
         position: fixed;
         z-index: 1;
         height: 100vh;
