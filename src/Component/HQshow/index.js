@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { HQcontainer, HQlist, ComicLable, LinkComic } from './styles';
-import {useDispatch, useSelector} from 'react-redux'
+import { HQcontainer, HQlist, ComicLable, LinkComic, Animatedli } from './styles';
+import {useDispatch} from 'react-redux'
 import {changeProduct} from '../../Store/Action'
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 function HQshow(props) {
     const dispacth = useDispatch();
@@ -11,13 +10,13 @@ function HQshow(props) {
         <HQcontainer>
             <HQlist>
                 {props.list.map((comic, index) =>
-                    <li key={index}>
+                    <Animatedli key={index} raro={comic.raro}>
                         {comic.raro ? <ComicLable raro={comic.raro}>Raro</ComicLable> : <ComicLable raro={comic.raro}>Comum</ComicLable>}
                         <LinkComic to='/compra' raro={comic.raro} onClick={() => {dispacth(changeProduct(comic))}}> 
                             <img src={`${comic.thumbnail.path}/portrait_uncanny.${comic.thumbnail.extension}`} alt=''></img>
                             <span>{comic.title}</span>
                         </LinkComic>
-                    </li>
+                    </Animatedli>
                 )}
             </HQlist>
         </HQcontainer>

@@ -20,8 +20,8 @@ function Header() {
           </MobileMenuButton>
           <PageLink show={showMobile}>
               <li><Link to='/sobre' onClick={HandleMobileMenu}>Sobre</Link></li>
-              <li><Link to='/carrinho' onClick={HandleMobileMenu}>Carrinho <CounterProduct display={Carrinho.length}>{Carrinho.length}</CounterProduct></Link></li>
               <li><Link to='/colecoes' onClick={HandleMobileMenu}>Coleções</Link></li>
+              <li><Link to='/carrinho' onClick={HandleMobileMenu}>Carrinho <CounterProduct display={Carrinho.length}>{Carrinho.length}</CounterProduct></Link></li>
               <li><a href='/' onClick={HandleMobileMenu}>Logout <MdOutlineLogout/></a></li>
           </PageLink>
       </HeaderContainer>

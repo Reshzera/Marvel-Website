@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+const FadeIn = keyframes`
+    from{
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%)
+    }
+`;
 
 export const HQcontainer = styled.div`
     width: 100%;
@@ -10,12 +21,6 @@ export const HQlist =  styled.ul`
     grid-gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     list-style: none;
-    li{
-       transition: all .2s ease-in-out;
-    :hover{
-            transform: translateY(-4%);
-        }
-    }
 `;
 export const ComicLable = styled.div`
     display: flex;
@@ -54,5 +59,12 @@ export const LinkComic = styled(Link)`
         @media(max-width: 425px){
             width: 100%;
         }
+    }
+`;
+export const Animatedli = styled.li`
+    animation: ${FadeIn} 1s linear;
+    transition: all .2s ease-in-out;
+    :hover{
+        transform: translateY(-4%);
     }
 `

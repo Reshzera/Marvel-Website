@@ -1,11 +1,21 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
+const FadeIn = keyframes`
+    from{
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%)
+    }
+`
 export const CarrinhoContainer = styled.div`
     width: 100%;
     padding: 100px 20px;
 `;
 export const CarrinhoDetalhes = styled.div`
-    max-width: 1200px;
+    max-width: 1500px;
     padding: 30px 50px;
     color: white;
     margin: auto;
@@ -13,6 +23,7 @@ export const CarrinhoDetalhes = styled.div`
     flex-direction: column;
     background-color: #111111;
     border-radius: 10px;
+    animation: ${FadeIn} .5s linear;
 `;
 export const ProductCarrinho  = styled.ul`
     color: white;

@@ -3,7 +3,7 @@ export function CupomValidation(cart , input, setDescontoRaro, SetDescontoCom, S
     console.log("func")
     Result.map((Produto)=>{
         switch (input){
-            case "RARO20OFF":{
+            case "RARA20OFF":{
                 if(Produto.raro === true){
                     console.log('raro')
                     Produto.prices[0].desconto = Produto.prices[0].price*0.8

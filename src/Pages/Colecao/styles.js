@@ -13,9 +13,6 @@ export const ColecaoContainer = styled.div`
     }
 `;
 
-export const BackgroundColection = styled.div`
-    background-color: #40404040;
-`
 export const ColectionTitle = styled.span`
     color: white;
     display: flex;

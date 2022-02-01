@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const FadeIn = keyframes`
+    from{
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%)
+    }
+`
 
 export const HomeContainer = styled.div`
     display: flex;
@@ -13,6 +24,7 @@ export const HomeContainer = styled.div`
     }
 `;
 export const SectionTitle = styled.span`
+    animation: ${FadeIn} 1s linear;    
     color: whitesmoke;
     display: flex;
     max-width: 350px;
@@ -28,6 +40,7 @@ export const SectionTitle = styled.span`
 `;
 export const CuponsAd = styled.div`
     display: flex;
+    animation: ${FadeIn} 1s linear;
     padding-top: 70px;
     background-color: #000000;
     align-items: center;
