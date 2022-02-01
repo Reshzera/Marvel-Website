@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# HQ's Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an Marvel HQ's Store made with React.js, HTML and CSS. 
 
-## Available Scripts
+![1_KBGdMaU_emZX4XR1AvkD4A](https://user-images.githubusercontent.com/46092730/152067237-020e7dee-ff76-48a1-8701-1315b4026c86.gif)
 
-In the project directory, you can run:
+## Home
+The Home shows best sellers HQ's and a coupon promotion ad: 
 
-### `npm start`
+![Screenshot 2022-02-01 190812](https://user-images.githubusercontent.com/46092730/152066735-107c6f15-ceaa-46aa-bcc3-7b1377911410.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Available coupons: COMUM30OFF or RARA20OFF
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Colection
 
-### `npm test`
+The colection-page shows the most popular HQ's of some Heros:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Screenshot 2022-02-01 192102](https://user-images.githubusercontent.com/46092730/152068004-36f91732-4da2-4abf-85be-1fe0167d64b0.png)
 
-### `npm run build`
+## Cart
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Cart has an coupon area, there is 2 coupons to be use: COMUM30OFF or RARA20OFF
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/46092730/152067724-07eb259b-757b-4f01-869f-436a99a82064.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Responsive
 
-### `npm run eject`
+This site is 100% responsive and can be used from any device whether mobile or not.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](https://user-images.githubusercontent.com/46092730/152068482-87541120-f3a0-428d-9a8a-09c3ad42818e.png)
+![image](https://user-images.githubusercontent.com/46092730/152068590-e579a835-1390-40bf-88e0-ef6d886a828d.png)
+![image](https://user-images.githubusercontent.com/46092730/152068680-6da0c9c0-1068-44ba-bb54-5b48479d9709.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## About the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In this project some auxiliary libraries were used such as: Redux, Styled-Component, React-Router-Dom. 
+In addition, all data used in this project was taken from the [Marvel API](https://developer.marvel.com/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
