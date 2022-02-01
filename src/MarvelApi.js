@@ -11,6 +11,10 @@ function AtribuirRaro(len, array){
       console.log(number)
       array[number].raro = true
     }
+    array.map((comic) => {
+      comic.prices[0].desconto = comic.prices[0].price
+      return 0
+    })
     return array
   }
 
@@ -21,4 +25,13 @@ export function GetComicList(functionset){
     .then(filtred => AtribuirRaro(filtred.length, filtred))
     .then(list => functionset(list))
 }
+
+export function GetComicListByID(id, functionset){
+  fetch(`https://gateway.marvel.com:443/v1/public/characters/${id}/comics?limit=10&ts=${ts}&apikey=${publicAPI}&hash=${hash}`)
+    .then(response => response.json())
+    .then(data => data.data.results.filter(comic => comic.thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"))
+    .then(filtred => AtribuirRaro(filtred.length, filtred))
+    .then(list => functionset(list))
+}
+
 export const DescriptionTemplate = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."

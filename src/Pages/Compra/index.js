@@ -5,7 +5,7 @@ import Modal from 'react-modal/lib/components/Modal';
 import { DescriptionTemplate } from '../../MarvelApi';
 import { addCart } from '../../Store/Action';
 import { CompraContainer, DetalhesComic, HQthumbContainer, HQTextContainer, AddCart, ModalButton, ModalContainer, ModalImg } from './styles';
-import css from './ModalTransition.css'
+import './ModalTransition.css'
 
 function Compra() {
   const customStyles = {
@@ -32,6 +32,7 @@ function Compra() {
   const closeModal = () => setIsOpen(false)
 
   const ComicInfo = useSelector(state => state.currentProduct)
+  console.log(ComicInfo)
   const dispatch = useDispatch();
 
 
@@ -54,7 +55,7 @@ function Compra() {
             </section>
             <div>
               <h1>Preço: ${ComicInfo.prices[0].price}</h1>
-              <AddCart onClick={() => {setIsOpen(true); dispatch(addCart(ComicInfo))}}>Adicionar Ao Carrinho</AddCart>
+              <AddCart onClick={() => {setIsOpen(true)}}>Adicionar Ao Carrinho</AddCart>
             </div>
           </HQTextContainer>
         </DetalhesComic>
@@ -69,8 +70,8 @@ function Compra() {
           <img src={`${ComicInfo.thumbnail.path}/portrait_incredible.${ComicInfo.thumbnail.extension}`} />
         </ModalImg>
         <ModalContainer> 
-          <ModalButton to='/' colorb='red'>Voltar para a loja</ModalButton>
-          <ModalButton to='/carrinho'>Ir pra o Carrinho</ModalButton>
+          <ModalButton to='/' colorb='red' onClick={() => {dispatch(addCart(ComicInfo))}}>Voltar para a loja</ModalButton>
+          <ModalButton to='/carrinho' onClick={() => {dispatch(addCart(ComicInfo))}}>Ir pra o Carrinho</ModalButton>
         </ModalContainer>
       </Modal>
       </CompraContainer>

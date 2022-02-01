@@ -31,6 +31,7 @@ export const PageLink = styled.ul`
     display: flex;
     list-style: none;
     li a{
+        position: relative;
         color: white;
         margin-left: 20px;
         width: 100px;
@@ -67,4 +68,19 @@ export const PageLink = styled.ul`
         padding-left: 0px;
         }
     }
+`;
+export const CounterProduct = styled.div`
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    display: ${props=> props.display === 0 ? 'none' : 'flex'};
+    border-radius: 15px;
+    background-color: darkred;
+    z-index: 3;
+    position: absolute;
+    right: -5px;
+    bottom: -2px;
 `

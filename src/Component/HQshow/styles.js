@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const HQcontainer = styled.div`
     width: 100%;
+    margin-bottom: 50px;
 `;
 export const HQlist =  styled.ul`
     display: grid;

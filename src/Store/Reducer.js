@@ -12,6 +12,8 @@ function Reducer(state = InitialState, action) {
 			return {...state, currentProduct: action.payload}
 		case 'ADD_CART':
 			return{...state, cart: [...state.cart, state.currentProduct]}
+		case 'RESET':
+			return InitialState
 		default:
 			return state
 	}

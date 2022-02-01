@@ -15,3 +15,10 @@ export function addCart() {
 		info: 'adicionando currentProduct no carrinho'
 	}
 }
+
+export function ResetCart() {
+	return {
+		type: 'RESET',
+		info: 'Voltando ao initialState'
+	}
+}
