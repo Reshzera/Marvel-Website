@@ -50,7 +50,7 @@ export const PageLink = styled.ul`
     @media(max-width: 670px){
         position: fixed;
         z-index: 1;
-        height: 100vh;
+        height: 105vh;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
