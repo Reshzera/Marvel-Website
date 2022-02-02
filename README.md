@@ -1,6 +1,6 @@
 # HQ's Store
 
-This project is an Marvel HQ's Store made with React.js, HTML and CSS. 
+This project is an Marvel HQ's Store made with React.js, HTML and CSS. [Click here to see the Project](https://marvel-website-nv9d9j1tu-reshzera.vercel.app/) (temporarily deployed)
 
 ![1_KBGdMaU_emZX4XR1AvkD4A](https://user-images.githubusercontent.com/46092730/152067237-020e7dee-ff76-48a1-8701-1315b4026c86.gif)
 
